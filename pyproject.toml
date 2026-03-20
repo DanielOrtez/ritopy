@@ -13,4 +13,6 @@ dependencies = [
 dev = [
     "ruff>=0.15.5",
     "ty>=0.0.21",
+    "pytest>=9.0.2",
+    "respx>=0.22.0",
 ]

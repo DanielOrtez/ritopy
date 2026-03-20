@@ -1,3 +1,4 @@
-from .games.lol_client import LoLClient
+from .endpoints.account import AccountAPI
+from .endpoints.summoner import SummonerAPI
 
-__all__ = ["LoLClient"]
+__all__ = ["SummonerAPI", "AccountAPI"]
