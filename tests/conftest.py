@@ -1,12 +1,12 @@
 import os
 
-import pytest
+import pytest_asyncio
 
 from ritopy.http.client import RitoHTTP
 
 API_KEY = os.getenv("RIOT_API") or "API"
 
 
-@pytest.fixture(autouse=True)
-def client():
-    return RitoHTTP(API_KEY)
+@pytest_asyncio.fixture(autouse=True)
+async def client():
+    yield RitoHTTP(API_KEY)
